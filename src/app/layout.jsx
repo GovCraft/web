@@ -14,13 +14,13 @@ export const metadata = {
     siteName: 'GovCraft',
     images: [
       {
-        url: '@/images/datacenter800x800.jpg', // Must be an absolute URL
+        url: 'https://github.com/GovCraft/web/assets/24578097/2d4a393a-85fb-488a-9e29-e7781ab1a2c2', // Must be an absolute URL
         width: 800,
         height: 600,
         alt: 'GovCraft logo displayed prominently in a high-tech data center environment, symbolizing advanced cloud-native AI specialization for government services.',
       },
       {
-        url: '@/images/datacenter.jpg', // Must be an absolute URL
+        url: 'https://github.com/GovCraft/web/assets/24578097/990ee822-bbee-488b-a648-afbe1a4aceea', // Must be an absolute URL
         width: 1800,
         height: 1800,
         alt: 'GovCraft logo displayed prominently in a high-tech data center environment, symbolizing advanced cloud-native AI specialization for government services.',
@@ -35,7 +35,7 @@ export const metadata = {
       // siteId: '1467726470533754880',
       creator: '@GovCraftAI',
       // creatorId: '1467726470533754880',
-      images: ['@/images/datacenter.jpg'], // Must be an absolute URL
+      images: ['https://github.com/GovCraft/web/assets/24578097/990ee822-bbee-488b-a648-afbe1a4aceea'], // Must be an absolute URL
     },
   },
 }
