@@ -134,7 +134,7 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We empower your transition into the digital era with bespoke AI and cloud solutions."
+        title="We empower your transition into the digital era with bespoke AI and cloud solutions"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
@@ -185,7 +185,7 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-slate-950 [text-wrap:balance] sm:text-7xl">
-            Cloud-native AI specialists for federal, state, and local government.
+            Cloud-native AI specialists for federal, state, and local government
           </h1>
           <p className="mt-6 text-xl text-slate-600">
             At GovCraft, we harness our deep private sector experience to bring state-of-the-art AI and cloud innovations to federal, state, and local governments. Our mission is to transform government operations with unparalleled efficiency and security enhancements.
