@@ -14,15 +14,16 @@ export const metadata = {
     siteName: 'GovCraft',
     images: [
       {
-        url: 'https://govcraft.ai/images/datacenter800x800.jpg', // Must be an absolute URL
+        url: '@/images/datacenter800x800.jpg', // Must be an absolute URL
         width: 800,
         height: 600,
+        alt: 'GovCraft logo displayed prominently in a high-tech data center environment, symbolizing advanced cloud-native AI specialization for government services.',
       },
       {
-        url: 'https://govcraft.ai/images/datacenter.jpg', // Must be an absolute URL
+        url: '@/images/datacenter.jpg', // Must be an absolute URL
         width: 1800,
         height: 1800,
-        alt: 'My custom alt',
+        alt: 'GovCraft logo displayed prominently in a high-tech data center environment, symbolizing advanced cloud-native AI specialization for government services.',
       },
     ],
     locale: 'en_US',
@@ -34,7 +35,7 @@ export const metadata = {
       // siteId: '1467726470533754880',
       creator: '@GovCraftAI',
       // creatorId: '1467726470533754880',
-      images: ['https://govcraft.ai/images/datacenter.jpg'], // Must be an absolute URL
+      images: ['@/images/datacenter.jpg'], // Must be an absolute URL
     },
   },
 }
