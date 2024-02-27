@@ -30,8 +30,10 @@ export function Offices({ invert = false, ...props }) {
       <li>
         <Office name="Texas" invert={invert}>
         615 N Upper Broadway
-          <br />
+        <br />
           Corpus Christi, TX 78401
+          <br />
+          1(888)508-6864
         </Office>
       </li>
     </ul>
