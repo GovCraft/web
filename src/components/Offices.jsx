@@ -33,7 +33,7 @@ export function Offices({ invert = false, ...props }) {
         <br />
           Corpus Christi, TX 78401
           <br />
-          1(888)508-6864
+          1 (888) 508-6864
         </Office>
       </li>
     </ul>
