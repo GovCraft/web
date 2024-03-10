@@ -1,6 +1,6 @@
 [[headers]]
-for = "/api/*" # Example proxy path
-  [headers.values]
-  Access-Control-Allow-Origin = "https://govcraft.ai"
-  Access-Control-Allow-Methods = "POST"
-  Access-Control-Allow-Headers = "Content-Type"
+  for = "/api" # Example proxy path
+  to = "https://ylw5nsj4f3.execute-api.us-east-1.amazonaws.com/"
+  statue = 200
+  force = true
+  headers = {Content-Type = "application/json"}
