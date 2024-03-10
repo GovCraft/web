@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/api/*"
+  from = "/form/*"
   to = "https://ylw5nsj4f3.execute-api.us-east-1.amazonaws.com/:splat"
   status = 200
   force = true
