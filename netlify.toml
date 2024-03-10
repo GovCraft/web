@@ -1,6 +1,6 @@
 [[headers]]
   from = "/api" # Example proxy path
   to = "https://ylw5nsj4f3.execute-api.us-east-1.amazonaws.com/"
-  statue = 200
+  status = 200
   force = true
   headers = {Content-Type = "application/json"}

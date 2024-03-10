@@ -10,6 +10,8 @@ import { remarkRehypeWrap } from 'remark-rehype-wrap'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import shiki from 'shiki'
 import { unifiedConditional } from 'unified-conditional'
+import CopyPlugin from "copy-webpack-plugin";
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

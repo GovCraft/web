@@ -33,6 +33,7 @@
     "unified-conditional": "0.0.2"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
     "prettier": "^3.1.1",
