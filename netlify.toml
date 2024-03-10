@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "/api" # Example proxy path
-  to = "https://ylw5nsj4f3.execute-api.us-east-1.amazonaws.com/"
+  from = "/api/*"
+  to = "https://ylw5nsj4f3.execute-api.us-east-1.amazonaws.com/:splat"
   status = 200
   force = true
   headers = {Content-Type = "application/json"}
