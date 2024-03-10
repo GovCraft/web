@@ -1,3 +1,4 @@
+
 import { useId } from 'react'
 import Link from 'next/link'
 
@@ -7,7 +8,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
-import { SocialMedia } from '@/components/SocialMedia'
+
 
 function TextInput({ label, ...props }) {
   let id = useId()
@@ -31,23 +32,57 @@ function TextInput({ label, ...props }) {
   )
 }
 
-function RadioInput({ label, ...props }) {
-  return (
-    <label className="flex gap-x-3">
-      <input
-        type="radio"
-        {...props}
-        className="h-6 w-6 flex-none appearance-none rounded-full border border-slate-950/20 outline-none checked:border-[0.5rem] checked:border-slate-950 focus-visible:ring-1 focus-visible:ring-slate-950 focus-visible:ring-offset-2"
-      />
-      <span className="text-base/6 text-slate-950">{label}</span>
-    </label>
-  )
-}
+const submitForm = async (formData) => {
+  "use server";
+  // Initialize an empty object to hold the transformed data
+  const dataToSubmit = {};
+
+  // Iterate over formData to populate dataToSubmit
+  for (const [key, value] of formData) {
+    // Ignore the action ID field
+    if (key.startsWith('$ACTION_ID')) continue;
+    dataToSubmit[key] = value;
+
+    // Extract and add domain from email
+    if (key === 'email') {
+      const domain = value.split('@')[1];
+      dataToSubmit['domain'] = domain;
+    }
+  }
+  // Define the URL to post the data
+  const url = 'https://ylw5nsj4f3.execute-api.us-east-1.amazonaws.com/';
+
+  try {
+    // Send the POST request
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataToSubmit),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    // Handle the response
+    const responseData = await response.json();
+    console.log('Success:', responseData);
+    //clear the form and notify the user
+    for (const [key, value] of formData) {
+      formData.delete(key);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
 
 function ContactForm() {
   return (
     <FadeIn className="lg:order-last">
-      <form>
+      <form action={submitForm}>
         <h2 className="font-display text-base font-semibold text-slate-950">
           Work inquiries
         </h2>
@@ -66,17 +101,7 @@ function ContactForm() {
           />
           <TextInput label="Contact Number" type="tel" name="phone" autoComplete="tel" />
           <TextInput label="Project Overview" name="message" />
-          {/* <div className="border border-slate-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
-            <fieldset>
-              <legend className="text-base/6 text-slate-500">Choose your investment range:</legend>
-              <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K – $50K" name="budget" value="25" />
-                <RadioInput label="$50K – $100K" name="budget" value="50" />
-                <RadioInput label="$100K – $150K" name="budget" value="100" />
-                <RadioInput label="More than $150K" name="budget" value="150" />
-              </div>
-            </fieldset>
-          </div> */}
+
         </div>
         <Button type="submit" className="mt-10">
           Begin the dialogue
@@ -85,6 +110,7 @@ function ContactForm() {
     </FadeIn>
   )
 }
+
 
 function ContactDetails() {
   return (
@@ -124,13 +150,6 @@ function ContactDetails() {
           ))}
         </dl>
       </Border>
-
-      {/* <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-slate-950">
-          Follow us
-        </h2>
-        <SocialMedia className="mt-6" />
-      </Border> */}
     </FadeIn>
   )
 }
