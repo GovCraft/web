@@ -71,7 +71,7 @@ export function Logo({
     >
       <Logomark
         preserveAspectRatio="xMinYMid meet"
-        className={clsx(className, 'h-8')}
+        className={clsx(className, 'h-9')}
         invert={invert}
         filled={filled}
       />
