@@ -1,4 +1,4 @@
-[[headers]]
+[[redirects]]
   from = "/api" # Example proxy path
   to = "https://ylw5nsj4f3.execute-api.us-east-1.amazonaws.com/"
   status = 200
