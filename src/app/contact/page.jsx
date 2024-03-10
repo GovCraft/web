@@ -50,7 +50,7 @@ const submitForm = async (formData) => {
     }
   }
   // Define the URL to post the data
-  const url = 'https://ylw5nsj4f3.execute-api.us-east-1.amazonaws.com/';
+  const url = '/api';
 
   try {
     // Send the POST request
