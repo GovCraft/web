@@ -1,5 +1,5 @@
 [[headers]]
-  for = "/api" # Example proxy path
+  from = "/api" # Example proxy path
   to = "https://ylw5nsj4f3.execute-api.us-east-1.amazonaws.com/"
   statue = 200
   force = true
