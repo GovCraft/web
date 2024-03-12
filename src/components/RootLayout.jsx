@@ -21,6 +21,7 @@ import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const RootLayoutContext = createContext(null)
 
@@ -54,6 +55,7 @@ function Header({
   return (
     <Container>
       <Analytics />
+      <SpeedInsights />
       <div className="flex items-center justify-between">
         <Link
           href="/"
