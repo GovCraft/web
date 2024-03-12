@@ -50,7 +50,7 @@ const submitForm = async (formData) => {
     }
   }
   // Define the URL to post the data
-  const url = '/form/submit';
+  const url = '/api/submit';
 
   try {
     // Send the POST request
