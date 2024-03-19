@@ -121,10 +121,14 @@ export function Footer() {
           </div>
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-slate-950/10 pt-12">
-          <Link href="/" aria-label="Home">
+        <Link href="/" aria-label="Home">
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-slate-700">
+          <Link href="/privacy" aria-label="Home" className='mr-8'>
+            Privacy Policy
+          </Link>
+
             © GovCraft Digital {new Date().getFullYear()}
           </p>
         </div>
