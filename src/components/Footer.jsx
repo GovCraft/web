@@ -125,8 +125,11 @@ export function Footer() {
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-slate-700">
-          <Link href="/privacy" aria-label="Home" className='mr-8'>
+          <Link href="/privacy" aria-label="Privacy Policy" className='mr-8'>
             Privacy Policy
+          </Link>
+          <Link href="/terms" aria-label="Terms of Service" className='mr-8'>
+            Terms of Service
           </Link>
 
             © GovCraft Digital {new Date().getFullYear()}
