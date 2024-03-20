@@ -1,6 +1,6 @@
 import { RootLayout } from '@/components/RootLayout'
 import Script from 'next/script'
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import '@/styles/tailwind.css'
 
 export const metadata = {
@@ -45,7 +45,7 @@ export default function Layout({ children }) {
   return (
     <html lang="en" className="h-full bg-slate-950 text-base antialiased">
       <body className="flex min-h-full flex-col">
-      <GoogleTagManager gtmId="GTM-WHJKZRSC" />
+      <GoogleAnalytics gtmId="G-LXKPXR51P4" />
         <Script id="clarity-script" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
