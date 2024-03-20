@@ -45,7 +45,7 @@ export default function Layout({ children }) {
   return (
     <html lang="en" className="h-full bg-slate-950 text-base antialiased">
       <body className="flex min-h-full flex-col">
-      <GoogleTagManager gtmId="G-HVTKTGLVQF" />
+      <GoogleTagManager gtmId="GTM-WHJKZRSC" />
         <Script id="clarity-script" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
